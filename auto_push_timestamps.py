@@ -28,7 +28,7 @@ def push_latest_timestamp( tval ):
 while True: 
     try: 
         #look up the file:
-        filepath = "/home/carl/Git_Projects/incubator/incubator/pi_incubator/datalog/today_data_piV1.csv"
+        filepath = "/home/cjchandler/Git_Projects/incubator/incubator/today_dataVDP.csv"
         #look at the pandas thing for last timestamp
         df = pd.read_csv(filepath)
         print(df.tail(20))
