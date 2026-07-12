@@ -5,7 +5,7 @@ import requests
 import time
 import pandas as pd
 import os
-
+from datetime import datetime
 
 def push_latest_timestamp( tval ): 
     tnow = time.time() 
@@ -34,7 +34,15 @@ while True:
         print(df.tail(20))
         tsaved = df[df.columns[2]].iloc[-1] #2 is the last time saved column
         
-        push_latest_timestamp( tsaved  )
+        now = datetime.now()
+        # Extract integers
+        current_hour = now.hour
+        current_minute = now.minute
+        print( current_hour , current_minute)
+        if current_hour == 12 and current_minute < 10:
+            pass
+        else:
+            push_latest_timestamp( tsaved  )
 
     except Exception as e:
         print(e)
