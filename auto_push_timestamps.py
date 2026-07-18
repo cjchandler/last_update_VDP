@@ -34,15 +34,47 @@ while True:
         print(df.tail(20))
         tsaved = df[df.columns[2]].iloc[-1] #2 is the last time saved column
         
+<<<<<<< HEAD
         now = datetime.now()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        # Get current date and time
+        now = datetime.now()
+
+=======
+        now = datetime.now()
+>>>>>>> c1ca1e1204b8ac157bbe811ee5cfefbb6fe946de
+=======
+        now = datetime.now()
+>>>>>>> 80e309cfc2e20fdef1e0a8a9054441afc533fef1
+>>>>>>> 9b5201843a8e13457eeae83a11b9d1150f9be64b
         # Extract integers
         current_hour = now.hour
         current_minute = now.minute
         print( current_hour , current_minute)
         if current_hour == 12 and current_minute < 10:
+<<<<<<< HEAD
             pass
         else:
             push_latest_timestamp( tsaved  )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+			pass
+		else:
+			push_latest_timestamp( tsaved  )
+=======
+            pass
+        else:
+            push_latest_timestamp( tsaved  )
+>>>>>>> c1ca1e1204b8ac157bbe811ee5cfefbb6fe946de
+=======
+            pass
+        else:
+            push_latest_timestamp( tsaved  )
+>>>>>>> 80e309cfc2e20fdef1e0a8a9054441afc533fef1
+>>>>>>> 9b5201843a8e13457eeae83a11b9d1150f9be64b
 
     except Exception as e:
         print(e)
